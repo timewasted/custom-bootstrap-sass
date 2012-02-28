@@ -1,0 +1,35 @@
+// THUMBNAILS
+// ----------
+
+.thumbnails {
+	margin-left: -$gridGutterWidth;
+	list-style: none;
+	@include clearfix();
+}
+.thumbnails > li {
+	float: left;
+	margin: 0 0 $baseLineHeight $gridGutterWidth;
+}
+.thumbnail {
+	display: block;
+	padding: 4px;
+	line-height: 1;
+	border: 1px solid $thumbnailBorder;
+	@include border-radius(4px);
+	@include box-shadow(0 1px 1px $thumbnailBoxShadow);
+}
+// Add a hover state for linked versions only
+a.thumbnail:hover {
+	border-color: $thumbnailHoverBorder;
+	@include box-shadow(0 1px 4px $thumbnailHoverBoxShadow);
+}
+// Images and captions
+.thumbnail > img {
+	display: block;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.thumbnail .caption {
+	padding: 9px;
+}

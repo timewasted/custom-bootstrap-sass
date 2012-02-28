@@ -1,0 +1,99 @@
+// Variables.scss
+// Variables to customize the look and feel of Bootstrap
+// -----------------------------------------------------
+
+
+
+// COLORS
+// ------
+
+// Grays
+$black:                  #000;
+$grayDarker:             #222;
+$grayDark:               #333;
+$gray:                   #555;
+$grayLight:              #999;
+$grayLighter:            #eee;
+$white:                  #fff;
+
+// Base colors
+$blue:                   #049cdb;
+$blueDark:               #0064cd;
+$brown:                  #9e846b;
+$brownDark:              #6f4c36;
+$green:                  #46a546;
+$red:                    #9d261d;
+$yellow:                 #ffc40d;
+$orange:                 #f89406;
+$pink:                   #c3325f;
+$purple:                 #7a43b6;
+
+// Page colors
+$textColor:              $grayDark;
+$backgroundColor:        $white;
+$linkColor:              #08c;
+$linkColorHover:         darken($linkColor, 15%);
+
+// Alert colors
+$alertWarningText:       #c09853;
+$alertWarningBackground: #fcf8e3;
+$alertWarningBorder:     darken(adjust-hue($alertWarningBackground, -10), 3%);
+$alertErrorText:         #b94a48;
+$alertErrorBackground:   #f2dede;
+$alertErrorBorder:       darken(adjust-hue($alertErrorBackground, -10), 3%);
+$alertSuccessText:       #468847;
+$alertSuccessBackground: #dff0d8;
+$alertSuccessBorder:     darken(adjust-hue($alertSuccessBackground, -10), 5%);
+$alertInfoText:          #3a87ad;
+$alertInfoBackground:    #d9edf7;
+$alertInfoBorder:        darken(adjust-hue($alertInfoBackground, -10), 7%);
+
+// Button colors
+$buttonPrimaryLight:     $linkColor;
+$buttonPrimary:          adjust-hue($buttonPrimaryLight, 20);
+$buttonWarning:          #f89406;
+$buttonWarningLight:     lighten($buttonWarning, 15%);
+$buttonDanger:           #bd362f;
+$buttonDangerLight:      #ee5f5b;
+$buttonSuccess:          #51a351;
+$buttonSuccessLight:     #62c462;
+$buttonInfo:             #2f96b4;
+$buttonInfoLight:        #5bc0de;
+$buttonInverse:          #262626;
+$buttonInverseLight:     #454545;
+
+
+
+// GLOBAL VALUES
+// -------------
+
+// Typography
+$baseFontSize:          13px;
+$baseFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+$baseLineHeight:        18px;
+
+
+
+// COMPONENT VARIABLES
+// -------------------
+
+// Sprite icons path
+$iconSpritePath:        "../img/glyphicons-halflings.png";
+$iconWhiteSpritePath:   "../img/glyphicons-halflings-white.png";
+
+// Navbar
+$navbarHeight:          40px;
+
+
+// GRID
+// ----
+
+// Default 940px grid
+$gridColumns:           12;
+$gridColumnWidth:       60px;
+$gridGutterWidth:       20px;
+$gridRowWidth:          ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
+
+// Fluid grid
+$fluidGridColumnWidth:  6.382978723%;
+$fluidGridGutterWidth:  2.127659574%;

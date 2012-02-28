@@ -1,0 +1,17 @@
+// WELLS
+// -----
+
+.well {
+	min-height: 20px;
+	padding: 19px;
+	margin-bottom: 20px;
+	background-color: $wellBackground;
+	border: 1px solid $wellBorderFallback;
+	border: 1px solid $wellBorder;
+	@include border-radius(4px);
+	@include box-shadow(inset 0 1px 1px $wellBoxShadow);
+	blockquote {
+		border-color: $wellQuoteBorderFallback;
+		border-color: $wellQuoteBorder;
+	}
+}

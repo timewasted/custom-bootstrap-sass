@@ -1,0 +1,298 @@
+// Variables-extras.scss
+// Extra variables to let you customize most everything
+// ----------------------------------------------------
+
+// Accordian
+$accordianBorder:       #e5e5e5;
+
+// Alerts
+$alertTextShadow:       rgba(255, 255, 255, 0.5);
+
+// Breadcrumbs
+$breadcrumbGradient:      #f5f5f5;
+$breadcrumbGradientLight: $white;
+$breadcrumbBorder:        #ddd;
+$breadcrumbBoxShadow:     $white;
+$breadcrumbTextShadow:    $white;
+$breadcrumbDivider:       $grayLight;
+$breadcrumbActive:        $grayDark;
+
+// Button groups
+$buttonGroupDropdownToggleBoxShadowInsetLeft: rgba(255, 255, 255, 0.125);
+$buttonGroupDropdownToggleBoxShadowInsetTop:  rgba(255, 255, 255, 0.2);
+$buttonGroupDropdownToggleBoxShadow:          rgba(0, 0, 0, 0.05);
+$buttonGroupOpenDropdownToggleBoxShadowInset: rgba(0, 0, 0, 0.15);
+$buttonCaretBorder:                           $white;
+
+// Buttons
+$buttonBaseColor:            $grayDark;
+$buttonBaseTextShadow:       rgba(255, 255, 255, 0.75);
+$buttonBaseGradientLight:    $white;
+$buttonBaseGradient:         darken($buttonBaseGradientLight, 10%);
+$buttonBaseBorder:           #ccc;
+$buttonBaseBorderBottom:     #bbb;
+$buttonBaseBoxShadowInset:   rgba(255, 255, 255, 0.2);
+$buttonBaseBoxShadow:        rgba(0, 0, 0, 0.05);
+$buttonHover:                $grayDark;
+$buttonHoverBackground:      darken($white, 10%);
+$buttonActiveBoxShadowInset: rgba(0, 0, 0, 0.15);
+$buttonActiveBoxShadow:      rgba(0, 0, 0, 0.05);
+$buttonActiveBackground:     darken($white, 10%);
+$buttonActiveBackgroundIE:   darken($white, 15%); // Why does this exist?
+$buttonDisabledBackground:   darken($white, 10%);
+$buttonTextShadow:           rgba(0, 0, 0, 0.25);
+$buttonColorFallback:        $white;
+$buttonColor:                rgba(255, 255, 255, 0.75);
+
+// Carousel
+$carouselControl:                   $white;
+$carouselControlBackground:         $grayDarker;
+$carouselControlBorder:             $white;
+$carouselControlHover:              $white;
+$carouselCaptionBackgroundFallback: $grayDark;
+$carouselCaptionBackground:         rgba(0, 0, 0, 0.75);
+$carouselCaption:                   $white;
+
+// Close
+$closeColor:            $black;
+$closeTextShadowColor:  rgba(255, 255, 255, 1);
+$closeHoverColor:       $black;
+
+// Code
+$codeColor:              #d14;
+$codeBackgroundColor:    #f7f7f9;
+$codeBorderColor:        #e1e1e8;
+$preColor:               $grayDark;
+$preBackgroundColor:     #f5f5f5;
+$preBorderColorFallback: #ccc;
+$preBorderColor:         rgba(0, 0, 0, 0.15);
+
+// Dropdowns
+$dropdownCaretBorder:                  $black;
+$dropdownMenuBackground:               $white;
+$dropdownMenuBorderFallback:           #ccc;
+$dropdownMenuBorder:                   rgba(0, 0, 0, 0.2);
+$dropdownMenuBoxShadow:                rgba(0, 0, 0, 0.2);
+$dropdownMenuDividerBackground:        #e5e5e5;
+$dropdownMenuDividerBorder:            $white;
+$dropdownMenuLink:                     $gray;
+$dropdownMenuLinkHover:                $white;
+$dropdownMenuLinkHoverBackground:      $linkColor;
+$dropdownOpenToggle:                   $white;
+$dropdownOpenToggleBackgroundFallback: #ccc;
+$dropdownOpenToggleBackground:         rgba(0, 0, 0, 0.3);
+
+// Forms
+$formLegend:                     $grayDark;
+$formLegendBorder:               #eee;
+$formLegendSmall:                $grayLight;
+$formLabel:                      $grayDark;
+$formInput:                      $gray;
+$formInputBorder:                #ccc;
+$formInputFileBackground:        $white;
+$formSelectBackground:           $white;
+$formInputBoxShadow:             rgba(0, 0, 0, 0.075);
+$formInputFocusBorder:           rgba(82, 168, 236, 0.8);
+$formInputFocusBoxShadowInset:   rgba(0, 0, 0, 0.075);
+$formInputFocusBoxShadow:        rgba(82, 168, 236, 0.6);
+$formInputDisabledBackground:    #f5f5f5;
+$formInputDisabledBorder:        #ddd;
+$formStateWarningText:           $alertWarningText;
+$formStateWarningBorder:         $alertWarningText;
+$formStateWarningBackground:     $alertWarningBackground;
+$formStateErrorText:             $alertErrorText;
+$formStateErrorBorder:           $alertErrorText;
+$formStateErrorBackground:       $alertErrorBackground;
+$formStateSuccessText:           $alertSuccessText;
+$formStateSuccessBorder:         $alertSuccessText;
+$formStateSuccessBackground:     $alertSuccessBackground;
+$formStateInvalid:               $formStateErrorText;
+$formStateInvalidBorder:         $buttonDangerLight;
+$formStateInvalidFocusBorder:    darken($formStateInvalidBorder, 10%);
+$formStateInvalidFocusBoxShadow: lighten($formStateInvalidBorder, 20%);
+$formActionsBackground:          #f5f5f5;
+$formActionsBorder:              #ddd;
+$formUneditableBackground:       $white;
+$formUneditableBorder:           #eee;
+$formUneditableBoxShadow:        rgba(0, 0, 0, 0.025);
+$formPlaceholder:                $grayLight;
+$formHelpBlock:                  $grayLight;
+$formAddon:                      $grayLight;
+$formAddonTextShadow:            $white;
+$formAddonBackground:            #f5f5f5;
+$formAddonBorder:                #ccc;
+$formAddonActiveBorder:          $green;
+$formAddonActiveBackground:      lighten($formAddonActiveBorder, 30);
+
+// Hero unit
+$heroUnitBackground:    #f5f5f5;
+
+// Labels
+$labelColor:            $white;
+$labelTextShadow:       rgba(0, 0, 0, 0.25);
+$labelBackground:       $grayLight;
+$labelHover:            $white;
+$labelImportant:        $alertErrorText;
+$labelImportantHover:   darken($labelImportant, 10%);
+$labelWarning:          $alertWarningText;
+$labelWarningHover:     darken($labelWarning, 10%);
+$labelSuccess:          $alertSuccessText;
+$labelSuccessHover:     darken($labelSuccess, 10%);
+$labelInfo:             $alertInfoText;
+$labelInfoHover:        darken($labelInfo, 10%);
+
+// Modals
+$modalBackdrop:         $black;
+$modalBackground:       $white;
+$modalBorderFallback:   #999;
+$modalBorder:           rgba(0, 0, 0, 0.3);
+$modalBoxShadow:        rgba(0, 0, 0, 0.3);
+$modalHeaderBorder:     #eee;
+$modalFooterBackground: #f5f5f5;
+$modalFooterBorder:     #ddd;
+$modalFooterBoxShadow:  $white;
+
+// Navbar
+$navbarBackgroundLight:                    $grayDark;
+$navbarBackground:                         $grayDarker;
+$navbarBoxShadow:                          rgba(0, 0, 0, 0.25);
+$navbarBoxShadowInset:                     rgba(0, 0, 0, 0.1);
+$navbarButtonBoxShadowInset:               rgba(255, 255, 255, 0.1);
+$navbarButtonBoxShadow:                    rgba(255, 255, 255, 0.075);
+$navbarButtonIconBarBackground:            #f5f5f5;
+$navbarButtonIconBarBoxShadow:             rgba(0, 0, 0, 0.25);
+$navbarBrand:                              $white;
+$navbarText:                               $grayLight;
+$navbarSearchQueryFallback:                $white;
+$navbarSearchQuery:                        rgba(255, 255, 255, 0.75);
+$navbarSearchQueryBackgroundFallback:      #666;
+$navbarSearchQueryBackground:              rgba(255, 255, 255, 0.3);
+$navbarSearchQueryBorder:                  #111;
+$navbarSearchQueryBoxShadowInset:          rgba(0, 0, 0, 0.1);
+$navbarSearchQueryBoxShadow:               rgba(255, 255, 255, 0.15);
+$navbarSearchQueryHover:                   $white;
+$navbarSearchQueryHoverBackgroundFallback: $grayLight;
+$navbarSearchQueryHoverBackground:         rgba(255, 255, 255, 0.5);
+$navbarSearchQueryFocus:                   $grayDark;
+$navbarSearchQueryFocusTextShadow:         $white;
+$navbarSearchQueryFocusBackground:         $white;
+$navbarSearchQueryFocusBoxShadow:          rgba(0, 0, 0, 0.15);
+$navbarLink:                               $grayLight;
+$navbarLinkTextShadow:                     rgba(0, 0, 0, 0.25);
+$navbarLinkBackgroundHover:                transparent;
+$navbarLinkHover:                          $white;
+$navbarLinkActive:                         $navbarBackground;
+$navbarDividerVerticalBackground:          $navbarBackground;
+$navbarDividerVerticalBorder:              $navbarBackgroundLight;
+$navbarDropdownMenuBeforeBorderFallback:   #ccc;
+$navbarDropdownMenuBeforeBorder:           rgba(0, 0, 0, 0.2);
+$navbarDropdownMenuAfterBorder:            $white;
+$navbarDropdownToggleCaretBorder:          $white;
+$navbarDropdownToggleLinkHover:            $white;
+
+// Navs
+$navLinkHoverBackground:             $grayLighter;
+$navHeader:                          $grayLight;
+$navHeaderTextShadow:                rgba(255, 255, 255, 0.5);
+$navListActiveLink:                  $white;
+$navListActiveLinkTextShadow:        rgba(0, 0, 0, 0.2);
+$navListActiveLinkBackground:        $linkColor;
+$navTabsBorder:                      #ddd;
+$navTabsBorderHover:                 #eee;
+$navTabsActiveLink:                  $gray;
+$navTabsActiveLinkBackground:        $white;
+$navPillsActiveLink:                 $white;
+$navPillsActiveLinkBackground:       $linkColor;
+$navDropdownToggleCaretBorder:       $linkColor;
+$navDropdownToggleCaretHoverBorder:  $linkColorHover;
+$navDropdownToggleCaretActiveBorder: $grayDark;
+$navDropdownActiveLinkHover:         $black;
+$navOpen:                            $white;
+$navOpenBackground:                  $grayLight;
+$navOpenBorder:                      $grayLight;
+$navOpenCaretBorder:                 $navOpen;
+
+// Pager
+$pagerBackground:       #fff;
+$pagerBorder:           #ddd;
+$pagerHoverBackground:  #f5f5f5;
+
+// Pagination
+$paginationBoxShadow:        rgba(0, 0, 0, 0.05);
+$paginationBorder:           #ddd;
+$paginationActiveBackground: #f5f5f5;
+$paginationActive:           $grayLight;
+$paginationDisabled:         $grayLight;
+
+// Popovers
+$popoverBackgroundFallback: $black;
+$popoverBackground:         rgba(0, 0, 0, 0.8);
+$popoverBoxShadow:          rgba(0, 0, 0, 0.3);
+$popoverTitleBackground:    #f5f5f5;
+$popoverTitleBorder:        #eee;
+$popoverContentBackground:  $white;
+
+// Progress bars
+$progressGradient:         #f9f9f9;
+$progressGradientLight:    #f5f5f5;
+$progressBoxShadow:        rgba(0, 0, 0, 0.1);
+$progressBar:              $white;
+$progressBarTextShadow:    rgba(0, 0, 0, 0.25);
+$progressBarGradient:      #0480be;
+$progressBarGradientLight: #149bdf;
+$progressBarBoxShadow:     rgba(0, 0, 0, 0.15);
+$progressBarStriped:       #62c462;
+$progressBarDanger:        #c43c35;
+$progressBarDangerLight:   $buttonDangerLight;
+$progressBarSuccess:       #57a957;
+$progressBarSuccessLight:  $buttonSuccessLight;
+$progressBarInfo:          #339bb9;
+$progressBarInfoLight:     $buttonInfoLight;
+
+// Tables
+$tableBorder:            #ddd;
+$tableStripedBackground: #f9f9f9;
+$tableHoverBackground:   #f5f5f5;
+
+// Thumbnails
+$thumbnailBorder:         #ddd;
+$thumbnailBoxShadow:      rgba(0, 0, 0, 0.075);
+$thumbnailHoverBorder:    $linkColor;
+$thumbnailHoverBoxShadow: rgba(0, 105, 214, 0.25);
+
+// Tooltip
+$tooltip:               $white;
+$tooltipBackground:     $black;
+
+// Type
+$pSmall:                $grayLight;
+$headingColor:          $grayDark;
+$headingSmall:          $grayLight;
+$h6Color:               $grayLight;
+$pageHeaderBorder:      $grayLighter;
+$hrBorderTop:           $grayLighter;
+$hrBorderBottom:        $white;
+$mutedColor:            $grayLight;
+$abbrBorder:            #ddd;
+$blockquoteBorder:      $grayLighter;
+$blockquoteSmall:       $grayLight;
+
+// Wells
+$wellBackground:          #f5f5f5;
+$wellBorderFallback:      #eee;
+$wellBorder:              rgba(0, 0, 0, 0.05);
+$wellBoxShadow:           rgba(0, 0, 0, 0.05);
+$wellQuoteBorderFallback: #ddd;
+$wellQuoteBorder:         rgba(0, 0, 0, 0.15);
+
+
+
+// Z-index master list
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+$zindexDropdown:        1000;
+$zindexPopover:         1010;
+$zindexTooltip:         1020;
+$zindexFixedNavbar:     1030;
+$zindexModalBackdrop:   1040;
+$zindexModal:           1050;
