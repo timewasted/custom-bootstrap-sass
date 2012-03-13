@@ -132,7 +132,6 @@ $formUneditableBorder:           #eee;
 $formUneditableBoxShadow:        rgba(0, 0, 0, 0.025);
 $formPlaceholder:                $grayLight;
 $formHelpBlock:                  $gray;
-$formAddon:                      $grayLight;
 $formAddonTextShadow:            $white;
 $formAddonBackground:            #f5f5f5;
 $formAddonBorder:                #ccc;
@@ -140,7 +139,9 @@ $formAddonActiveBorder:          $green;
 $formAddonActiveBackground:      lighten($formAddonActiveBorder, 30);
 
 // Hero unit
-$heroUnitBackground:    #f5f5f5;
+$heroUnitBackground:    $grayLighter;
+$heroUnitHeading:       inherit;
+$heroUnitLead:          inherit;
 
 // Labels
 $labelColor:            $white;
@@ -180,13 +181,12 @@ $navbarButtonIconBarBackground:            #f5f5f5;
 $navbarButtonIconBarBoxShadow:             rgba(0, 0, 0, 0.25);
 $navbarBrand:                              $white;
 $navbarText:                               $grayLight;
-$navbarSearchQueryFallback:                $white;
-$navbarSearchQuery:                        rgba(255, 255, 255, 0.75);
-$navbarSearchQueryBackgroundFallback:      #666;
-$navbarSearchQueryBackground:              rgba(255, 255, 255, 0.3);
-$navbarSearchQueryBorder:                  #111;
+$navbarSearchQuery:                        $white;
+$navbarSearchQueryBackground:              lighten($navbarBackground, 25%);
+$navbarSearchQueryBorder:                  darken($navbarBackground, 15%);
 $navbarSearchQueryBoxShadowInset:          rgba(0, 0, 0, 0.1);
 $navbarSearchQueryBoxShadow:               rgba(255, 255, 255, 0.15);
+$navbarSearchQueryPlaceholder:             #ccc;
 $navbarSearchQueryHover:                   $white;
 $navbarSearchQueryHoverBackgroundFallback: $grayLight;
 $navbarSearchQueryHoverBackground:         rgba(255, 255, 255, 0.5);
@@ -230,9 +230,11 @@ $navOpenBorder:                      $grayLight;
 $navOpenCaretBorder:                 $navOpen;
 
 // Pager
-$pagerBackground:       #fff;
-$pagerBorder:           #ddd;
-$pagerHoverBackground:  #f5f5f5;
+$pagerBackground:         #fff;
+$pagerBorder:             #ddd;
+$pagerHoverBackground:    #f5f5f5;
+$pagerDisabled:           $grayLight;
+$pagerDisabledBackground: $pagerBackground;
 
 // Pagination
 $paginationBoxShadow:        rgba(0, 0, 0, 0.05);

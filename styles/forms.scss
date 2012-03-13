@@ -48,7 +48,7 @@ input,
 button,
 select,
 textarea {
-	@include font-family-sans-serif(); // Any only set font-family here for those that need it (note the missing label element)
+	font-family: $baseFontFamily; // And only set font-family here for those that need it (note the missing label element)
 }
 
 // Identify controls by their labels
@@ -362,10 +362,10 @@ select:focus:required:invalid {
 .input-prepend,
 .input-append {
 	margin-bottom: 5px;
-	@include clearfix(); // Clear the float to prevent wrapping
 	input,
 	select,
 	.uneditable-input {
+		*margin-left: 0;
 		@include border-radius(0 3px 3px 0);
 		&:focus {
 			position: relative;
@@ -376,20 +376,21 @@ select:focus:required:invalid {
 		border-left-color: $formAddonBorder;
 	}
 	.add-on {
-		float: left;
-		display: block;
+		display: inline-block;
 		width: auto;
 		min-width: 16px;
 		height: $baseLineHeight;
-		margin-right: -1px;
 		padding: 4px 5px;
 		font-weight: normal;
 		line-height: $baseLineHeight;
-		color: $formAddon;
 		text-align: center;
 		text-shadow: 0 1px 0 $formAddonTextShadow;
+		vertical-align: middle;
 		background-color: $formAddonBackground;
 		border: 1px solid $formAddonBorder;
+	}
+	.add-on,
+	.btn {
 		@include border-radius(3px 0 0 3px);
 	}
 	.active {
@@ -398,34 +399,43 @@ select:focus:required:invalid {
 	}
 }
 .input-prepend {
-	.add-on {
-		*margin-top: 1px; /* IE6-7 */
+	.add-on,
+	.btn {
+		margin-right: -1px;
 	}
 }
 .input-append {
 	input,
 	select,
 	.uneditable-input {
-		float: left;
 		@include border-radius(3px 0 0 3px);
 	}
 	.uneditable-input {
 		border-left-color: $formUneditableBorder;
 		border-right-color: $formAddonBorder;
 	}
-	.add-on {
-		margin-right: 0;
+	.add-on,
+	.btn {
 		margin-left: -1px;
 		@include border-radius(0 3px 3px 0);
 	}
-	input:first-child {
-		// In IE7, having a hasLayout container (from clearfix's zoom:1) can make the first input
-		// inherit the sum of its ancestors' margins.
-		*margin-left: -160px;
-
-		&+.add-on {
-			*margin-left: -21px;
-		}
+}
+// Remove all border-radius for inputs with both prepend and append
+.input-prepend.input-append {
+	input,
+	select,
+	.uneditable-input {
+		@include border-radius(0);
+	}
+	.add-on:first-child,
+	.btn:first-child {
+		margin-right: -1px;
+		@include border-radius(3px 0 0 3px);
+	}
+	.add-on:last-child,
+	.btn:last-child {
+		margin-left: -1px;
+		@include border-radius(0 3px 3px 0);
 	}
 }
 
@@ -456,7 +466,9 @@ select:focus:required:invalid {
 	textarea,
 	select,
 	.help-inline,
-	.uneditable-input {
+	.uneditable-input,
+	.input-prepend,
+	.input-append {
 		display: inline-block;
 		margin-bottom: 0;
 	}
@@ -466,19 +478,15 @@ select:focus:required:invalid {
 	}
 }
 .form-search label,
-.form-inline label,
+.form-inline label {
+	display: inline-block;
+}
+// Remove margin for input-prepend/-append
 .form-search .input-append,
 .form-inline .input-append,
 .form-search .input-prepend,
 .form-inline .input-prepend {
-	display: inline-block;
-}
-// Make the prepend and append add-on vertical-align: middle;
-.form-search .input-append .add-on,
-.form-inline .input-prepend .add-on,
-.form-search .input-append .add-on,
-.form-inline .input-prepend .add-on {
-	vertical-align: middle;
+	margin-bottom: 0;
 }
 // Inline checkbox/radio labels (remove padding on left)
 .form-search .radio,
@@ -529,6 +537,10 @@ legend + .control-group {
 	// Move over all input controls and content
 	.controls {
 		margin-left: 160px;
+		// Super jank IE7 fix to ensure the inputs in .input-append and .input-prepend don't inherit the margin of the parent, in this case .control
+		*display: inline-block;
+		*margin-left: 0;
+		*padding-left: 20px;
 	}
 	// Remove bottom margin on block level help text since that's accounted for on .control-group
 	.help-block {

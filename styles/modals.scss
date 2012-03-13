@@ -64,7 +64,7 @@
 	padding: 15px;
 }
 // Remove bottom margin if need be
-.modal-body .modal-form {
+.modal-form {
 	margin-bottom: 0;
 }
 
@@ -84,5 +84,9 @@
 		float: right;
 		margin-left: 5px;
 		margin-bottom: 0; // account for input[type="submit"] which gets the bottom margin like all other inputs
+	}
+	// but override that for button groups
+	.btn-group .btn + .btn {
+		margin-left: -1px;
 	}
 }

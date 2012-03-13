@@ -7,7 +7,7 @@ code,
 pre {
 	padding: 0 3px 2px;
 	@include font-family-monospace();
-	font-size: $baseFontSize - 1;
+	font-size: $baseFontSize * 0.925; // 13px to 12px
 	@include border-radius(3px);
 }
 
