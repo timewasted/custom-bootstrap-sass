@@ -253,7 +253,7 @@ textarea[class*="span"],
 // GRID SIZING FOR INPUTS
 // ----------------------
 
-@include inputGridSystem-generate($gridColumns, $gridColumnWidth, $gridGutterWidth);
+@include grid-input($gridColumnWidth, $gridGutterWidth);
 
 
 
@@ -316,6 +316,7 @@ select:focus:required:invalid {
 	margin-bottom: $baseLineHeight;
 	background-color: $formActionsBackground;
 	border-top: 1px solid $formActionsBorder;
+	@include clearfix(); // Adding clearfix to allow for .pull-right button containers
 }
 
 // For text that needs to appear as an input but should not be an input

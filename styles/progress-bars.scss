@@ -93,3 +93,11 @@
 .progress-info.progress-striped .bar {
 	@include gradient-striped($progressBarInfoLight);
 }
+
+// Warning
+.progress-warning .bar {
+	@include gradient-vertical($progressBarWarningLight, $progressBarWarning);
+}
+.progress-warning.progress-striped .bar {
+	@include gradient-striped($progressBarWarningLight);
+}
