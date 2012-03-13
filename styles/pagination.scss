@@ -32,6 +32,7 @@
 	color: $paginationActive;
 	cursor: default;
 }
+.pagination .disabled span,
 .pagination .disabled a,
 .pagination .disabled a:hover {
 	color: $paginationDisabled;

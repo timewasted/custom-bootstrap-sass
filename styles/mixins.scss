@@ -143,7 +143,6 @@
 // Site container
 // --------------
 @mixin container-fixed() {
-	width: $gridRowWidth;
 	margin-left: auto;
 	margin-right: auto;
 	@include clearfix();
@@ -174,6 +173,15 @@
 	[class*="span"] {
 		@include gridSystem-gridColumn($gridGutterWidth);
 	}
+
+	// Fixed containers
+	// Default container and reset for fixed navbars
+	.container,
+	.navbar-fixed-top .container,
+	.navbar-fixed-bottom .container {
+		@include gridSystem-columns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, $gridColumns);
+	}
+
 	// Default columns
 	.span1     { @include gridSystem-columns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 1); }
 	.span2     { @include gridSystem-columns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 2); }
@@ -186,8 +194,20 @@
 	.span9     { @include gridSystem-columns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 9); }
 	.span10    { @include gridSystem-columns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 10); }
 	.span11    { @include gridSystem-columns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 11); }
-	.span12,
-	.container { @include gridSystem-columns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 12); }
+	.span12    { @include gridSystem-columns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 12); }
+	.span13    { @include gridSystem-columns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 13); }
+	.span14    { @include gridSystem-columns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 14); }
+	.span15    { @include gridSystem-columns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 15); }
+	.span16    { @include gridSystem-columns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 16); }
+	.span17    { @include gridSystem-columns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 17); }
+	.span18    { @include gridSystem-columns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 18); }
+	.span19    { @include gridSystem-columns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 19); }
+	.span20    { @include gridSystem-columns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 20); }
+	.span21    { @include gridSystem-columns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 21); }
+	.span22    { @include gridSystem-columns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 22); }
+	.span23    { @include gridSystem-columns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 23); }
+	.span24    { @include gridSystem-columns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 24); }
+
 	// Offset column options
 	.offset1   { @include gridSystem-offset($gridColumnWidth, $gridGutterWidth, 1); }
 	.offset2   { @include gridSystem-offset($gridColumnWidth, $gridGutterWidth, 2); }
@@ -200,6 +220,18 @@
 	.offset9   { @include gridSystem-offset($gridColumnWidth, $gridGutterWidth, 9); }
 	.offset10  { @include gridSystem-offset($gridColumnWidth, $gridGutterWidth, 10); }
 	.offset11  { @include gridSystem-offset($gridColumnWidth, $gridGutterWidth, 11); }
+	.offset12  { @include gridSystem-offset($gridColumnWidth, $gridGutterWidth, 12); }
+	.offset13  { @include gridSystem-offset($gridColumnWidth, $gridGutterWidth, 13); }
+	.offset14  { @include gridSystem-offset($gridColumnWidth, $gridGutterWidth, 14); }
+	.offset15  { @include gridSystem-offset($gridColumnWidth, $gridGutterWidth, 15); }
+	.offset16  { @include gridSystem-offset($gridColumnWidth, $gridGutterWidth, 16); }
+	.offset17  { @include gridSystem-offset($gridColumnWidth, $gridGutterWidth, 17); }
+	.offset18  { @include gridSystem-offset($gridColumnWidth, $gridGutterWidth, 18); }
+	.offset19  { @include gridSystem-offset($gridColumnWidth, $gridGutterWidth, 19); }
+	.offset20  { @include gridSystem-offset($gridColumnWidth, $gridGutterWidth, 20); }
+	.offset21  { @include gridSystem-offset($gridColumnWidth, $gridGutterWidth, 21); }
+	.offset22  { @include gridSystem-offset($gridColumnWidth, $gridGutterWidth, 22); }
+	.offset23  { @include gridSystem-offset($gridColumnWidth, $gridGutterWidth, 23); }
 }
 
 // Fluid grid system
@@ -239,6 +271,18 @@
 		> .span10  { @include fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, 10); }
 		> .span11  { @include fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, 11); }
 		> .span12  { @include fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, 12); }
+		> .span13  { @include fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, 13); }
+		> .span14  { @include fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, 14); }
+		> .span15  { @include fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, 15); }
+		> .span16  { @include fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, 16); }
+		> .span17  { @include fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, 17); }
+		> .span18  { @include fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, 18); }
+		> .span19  { @include fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, 19); }
+		> .span20  { @include fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, 20); }
+		> .span21  { @include fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, 21); }
+		> .span22  { @include fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, 22); }
+		> .span23  { @include fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, 23); }
+		> .span24  { @include fluidGridSystem-columns($fluidGridGutterWidth, $fluidGridColumnWidth, 24); }
 	}
 }
 
@@ -263,8 +307,29 @@
 		&.span10  { @include inputGridSystem-inputColumns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 10); }
 		&.span11  { @include inputGridSystem-inputColumns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 11); }
 		&.span12  { @include inputGridSystem-inputColumns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 12); }
+		&.span13  { @include inputGridSystem-inputColumns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 13); }
+		&.span14  { @include inputGridSystem-inputColumns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 14); }
+		&.span15  { @include inputGridSystem-inputColumns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 15); }
+		&.span16  { @include inputGridSystem-inputColumns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 16); }
+		&.span17  { @include inputGridSystem-inputColumns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 17); }
+		&.span18  { @include inputGridSystem-inputColumns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 18); }
+		&.span19  { @include inputGridSystem-inputColumns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 19); }
+		&.span20  { @include inputGridSystem-inputColumns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 20); }
+		&.span21  { @include inputGridSystem-inputColumns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 21); }
+		&.span22  { @include inputGridSystem-inputColumns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 22); }
+		&.span23  { @include inputGridSystem-inputColumns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 23); }
+		&.span24  { @include inputGridSystem-inputColumns($gridGutterWidth, $gridColumnWidth, $gridRowWidth, 24); }
 	}
 }
+
+// Table grid system
+// -----------------
+@mixin tableColumns($columnSpan: 1) {
+	float: none; // undo default grid column styles
+	width: (($gridColumnWidth) * $columnSpan) + ($gridGutterWidth * ($columnSpan - 1)) - 16; // 16 is total padding on left and right of table cells
+	margin-left: 0; // undo default grid column styles
+}
+
 
 // Make a Grid
 // -----------
@@ -501,8 +566,8 @@
 	background-image: -webkit-radial-gradient(circle, $innerColor, $outerColor);
 	background-image: -moz-radial-gradient(circle, $innerColor, $outerColor);
 	background-image: -ms-radial-gradient(circle, $innerColor, $outerColor);
+	background-image: -o-radial-gradient(circle, $innerColor, $outerColor);
 	background-repeat: no-repeat;
-	// Opera cannot do radial gradients yet
 }
 @mixin gradient-striped($color, $angle: -45deg) {
 	background-color: $color;
@@ -519,8 +584,30 @@
 }
 
 
-// Mixin for generating button backgrounds
-// ---------------------------------------
+// COMPONENT MIXINS
+// ----------------
+
+// Horizontal dividers
+// -------------------
+// Dividers (basically an hr) within dropdowns and nav lists
+@mixin nav-divider() {
+	height: 1px;
+	margin: (($baseLineHeight / 2) - 1) 1px; // 8px 1px
+	overflow: hidden;
+	background-color: $dropdownMenuDividerBackground;
+	border-bottom: 1px solid $dropdownMenuDividerBorder;
+
+	// IE7 needs a set width since we gave a height.  Restricting just
+	// to IE7 to keep the 1px left/right space in other browsers.
+	// It is unclear where IE is getting the extra space that we need
+	// to negative-margin away, but so it goes.
+	*width: 100%;
+	*margin: -5px 0 5px;
+}
+
+
+// Button backgrounds
+// ------------------
 @mixin buttonBackground($startColor, $endColor) {
 	// gradientBar will set the background to a pleasing blend of these, to support IE<=9
 	@include gradientBar($startColor, $endColor);
@@ -539,10 +626,16 @@
 }
 
 
-// COMPONENT MIXINS
-// --------------------------------------------------
+// Navbar vertical align
+// ---------------------
+// Vertically center elements in the navbar.
+// Example: an element has a height of 30px, so write out '@include navbarVerticalAlign(30px);' to calculate the appropriate top margin.
+@mixin navbarVerticalAlign($elementHeight) {
+	margin-top: ($navbarHeight - $elementHeight) / 2;
+}
 
-// POPOVER ARROWS
+
+// Popover arrows
 // -------------------------
 // For tipsies and popovers
 @mixin popoverArrow-top($arrowWidth: 5px) {

@@ -18,6 +18,7 @@
 // Required since we compile the responsive stuff separately
 
 @import "variables.scss"; // Modify this for custom colors, font-sizes, etc
+@import "variables-extra.scss";
 @import "mixins.scss";
 
 
@@ -31,6 +32,37 @@
 	visibility: hidden;
 }
 
+// Visibility utilities
+
+// For desktops
+.visible-phone     { display: none; }
+.visible-tablet    { display: none; }
+.visible-desktop   { display: block; }
+.hidden-phone      { display: block; }
+.hidden-tablet     { display: block; }
+.hidden-desktop    { display: none; }
+
+// Phones only
+@media (max-width: 767px) {
+	// Show
+	.visible-phone     { display: block; }
+	// Hide
+	.hidden-phone      { display: none; }
+	// Hide everything else
+	.hidden-desktop    { display: block; }
+	.visible-desktop   { display: none; }
+}
+
+// Tablets & small desktops only
+@media (min-width: 768px) and (max-width: 979px) {
+	// Show
+	.visible-tablet    { display: block; }
+	// Hide
+	.hidden-tablet     { display: none; }
+	// Hide everything else
+	.hidden-desktop    { display: block; }
+	.visible-desktop   { display: none; }
+}
 
 
 // UP TO LANDSCAPE PHONE
@@ -58,9 +90,9 @@
 		min-height: 28px; /* Make inputs at least the height of their button counterpart */
 		/* Makes inputs behave like true block-level elements */
 		-webkit-box-sizing: border-box; /* Older Webkit */
-		   -moz-box-sizing: border-box; /* Older FF */
-		    -ms-box-sizing: border-box; /* IE8 */
-		        box-sizing: border-box; /* CSS3 spec */
+			 -moz-box-sizing: border-box; /* Older FF */
+				-ms-box-sizing: border-box; /* IE8 */
+						box-sizing: border-box; /* CSS3 spec */
 	}
 	// But don't let it screw up prepend/append inputs
 	.input-prepend input[class*="span"],
@@ -154,13 +186,13 @@
 
 @media (min-width: 768px) and (max-width: 979px) {
 	// Fixed grid
-	@include gridSystem-generate(12, 42px, 20px);
+	@include gridSystem-generate($gridColumns, 42px, 20px);
 
 	// Fluid grid
-	@include fluidGridSystem-generate(12, 5.801104972%, 2.762430939%);
+	@include fluidGridSystem-generate($gridColumns, 5.801104972%, 2.762430939%);
 
 	// Input grid
-	@include inputGridSystem-generate(12, 42px, 20px);
+	@include inputGridSystem-generate($gridColumns, 42px, 20px);
 }
 
 
@@ -302,13 +334,13 @@
 
 @media (min-width: 1200px) {
 	// Fixed grid
-	@include gridSystem-generate(12, 70px, 30px);
+	@include gridSystem-generate($gridColumns, 70px, 30px);
 
 	// Fluid grid
-	@include fluidGridSystem-generate(12, 5.982905983%, 2.564102564%);
+	@include fluidGridSystem-generate($gridColumns, 5.982905983%, 2.564102564%);
 
 	// Input grid
-	@include inputGridSystem-generate(12, 70px, 30px);
+	@include inputGridSystem-generate($gridColumns, 70px, 30px);
 
 	// Thumbnails
 	.thumbnails {

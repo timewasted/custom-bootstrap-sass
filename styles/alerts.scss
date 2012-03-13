@@ -9,10 +9,10 @@
 	background-color: $alertWarningBackground;
 	border: 1px solid $alertWarningBorder;
 	@include border-radius(4px);
-}
-.alert,
-.alert-heading {
 	color: $alertWarningText;
+}
+.alert-heading {
+	color: inherit;
 }
 
 // Adjust close link position
@@ -30,28 +30,17 @@
 .alert-success {
 	background-color: $alertSuccessBackground;
 	border-color: $alertSuccessBorder;
-}
-.alert-success,
-.alert-success .alert-heading {
 	color: $alertSuccessText;
 }
 .alert-danger,
 .alert-error {
 	background-color: $alertErrorBackground;
 	border-color: $alertErrorBorder;
-}
-.alert-danger,
-.alert-error,
-.alert-danger .alert-heading,
-.alert-error .alert-heading {
 	color: $alertErrorText;
 }
 .alert-info {
 	background-color: $alertInfoBackground;
 	border-color: $alertInfoBorder;
-}
-.alert-info,
-.alert-info .alert-heading {
 	color: $alertInfoText;
 }
 

@@ -8,6 +8,21 @@ $accordianBorder:       #e5e5e5;
 // Alerts
 $alertTextShadow:       rgba(255, 255, 255, 0.5);
 
+// Badges
+$badgeColor:            $white;
+$badgeBackground:       $grayLight;
+$badgeColorHover:       $white;
+$badgeError:            $alertErrorText;
+$badgeErrorHover:       darken($badgeError, 10%);
+$badgeWarning:          $alertWarningText;
+$badgeWarningHover:     darken($badgeWarning, 10%);
+$badgeSuccess:          $alertSuccessText;
+$badgeSuccessHover:     darken($badgeSuccess, 10%);
+$badgeInfo:             $alertInfoText;
+$badgeInfoHover:        darken($badgeInfo, 10%);
+$badgeInverse:          $buttonInverse;
+$badgeInverseHover:     darken($badgeInverse, 10%);
+
 // Breadcrumbs
 $breadcrumbGradient:      #f5f5f5;
 $breadcrumbGradientLight: $white;
@@ -116,7 +131,7 @@ $formUneditableBackground:       $white;
 $formUneditableBorder:           #eee;
 $formUneditableBoxShadow:        rgba(0, 0, 0, 0.025);
 $formPlaceholder:                $grayLight;
-$formHelpBlock:                  $grayLight;
+$formHelpBlock:                  $gray;
 $formAddon:                      $grayLight;
 $formAddonTextShadow:            $white;
 $formAddonBackground:            #f5f5f5;
@@ -140,6 +155,8 @@ $labelSuccess:          $alertSuccessText;
 $labelSuccessHover:     darken($labelSuccess, 10%);
 $labelInfo:             $alertInfoText;
 $labelInfoHover:        darken($labelInfo, 10%);
+$labelInverse:          $buttonInverse;
+$labelInverseHover:     darken($labelInverse, 10%);
 
 // Modals
 $modalBackdrop:         $black;

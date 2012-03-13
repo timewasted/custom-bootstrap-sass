@@ -136,6 +136,7 @@
 .btn-inverse {
 	.caret {
 		border-top-color: $buttonCaretBorder;
+		border-bottom-color: $buttonCaretBorder;
 		@include opacity(75);
 	}
 }

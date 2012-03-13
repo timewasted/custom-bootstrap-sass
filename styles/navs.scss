@@ -64,6 +64,10 @@
 .nav-list [class^="icon-"] {
 	margin-right: 2px;
 }
+// Dividers (basically an hr) within the dropdown
+.nav-list .divider {
+	@include nav-divider();
+}
 
 
 
@@ -200,11 +204,13 @@
 .nav-tabs .dropdown-toggle .caret,
 .nav-pills .dropdown-toggle .caret {
 	border-top-color: $navDropdownToggleCaretBorder;
+	border-bottom-color: $navDropdownToggleCaretBorder;
 	margin-top: 6px;
 }
 .nav-tabs .dropdown-toggle:hover .caret,
 .nav-pills .dropdown-toggle:hover .caret {
 	border-top-color: $navDropdownToggleCaretHoverBorder;
+	border-bottom-color: $navDropdownToggleCaretHoverBorder;
 }
 
 // Active dropdown links
@@ -212,6 +218,7 @@
 .nav-tabs .active .dropdown-toggle .caret,
 .nav-pills .active .dropdown-toggle .caret {
 	border-top-color: $navDropdownToggleCaretActiveBorder;
+	border-bottom-color: $navDropdownToggleCaretActiveBorder;
 }
 
 // Active:hover dropdown links
@@ -234,6 +241,7 @@
 .nav .open.active .caret,
 .nav .open a:hover .caret {
 	border-top-color: $navOpenCaretBorder;
+	border-bottom-color: $navOpenCaretBorder;
 	@include opacity(100);
 }
 
@@ -256,7 +264,8 @@
 	@include clearfix();
 }
 .tab-content {
-	overflow: hidden; // prevent content from running below tabs
+	display: table; // prevent content from running below tabs
+	width: 100%;
 }
 
 // Remove border on bottom, left, right

@@ -335,17 +335,19 @@ select:focus:required:invalid {
 // HELP TEXT
 // ---------
 
+.help-block,
+.help-inline {
+	color: $formHelpBlock;
+}
+
 .help-block {
 	display: block; // account for any element using help-block
-	margin-top: 5px;
-	margin-bottom: 0;
-	color: $formHelpBlock;
+	margin-bottom: $baseLineHeight / 2;
 }
 
 .help-inline {
 	display: inline-block;
 	@include ie7-inline-block();
-	margin-bottom: 9px;
 	vertical-align: middle;
 	padding-left: 5px;
 }
@@ -361,6 +363,7 @@ select:focus:required:invalid {
 	margin-bottom: 5px;
 	@include clearfix(); // Clear the float to prevent wrapping
 	input,
+	select,
 	.uneditable-input {
 		@include border-radius(0 3px 3px 0);
 		&:focus {
@@ -400,6 +403,7 @@ select:focus:required:invalid {
 }
 .input-append {
 	input,
+	select,
 	.uneditable-input {
 		float: left;
 		@include border-radius(3px 0 0 3px);
@@ -475,13 +479,23 @@ select:focus:required:invalid {
 .form-inline .input-prepend .add-on {
 	vertical-align: middle;
 }
-// Inline checkbox/radio labels
+// Inline checkbox/radio labels (remove padding on left)
 .form-search .radio,
 .form-inline .radio,
 .form-search .checkbox,
 .form-inline .checkbox {
+	padding-left: 0;
 	margin-bottom: 0;
 	vertical-align: middle;
+}
+// Remove float and margin, set to inline-block
+.form-search .radio input[type="radio"],
+.form-search .checkbox input[type="checkbox"],
+.form-inline .radio input[type="radio"],
+.form-inline .checkbox input[type="checkbox"] {
+	float: left;
+	margin-left: 0;
+	margin-right: 3px;
 }
 
 // Margin to space out fieldsets
@@ -514,6 +528,11 @@ legend + .control-group {
 	// Move over all input controls and content
 	.controls {
 		margin-left: 160px;
+	}
+	// Remove bottom margin on block level help text since that's accounted for on .control-group
+	.help-block {
+		margin-top: $baseLineHeight / 2;
+		margin-bottom: 0;
 	}
 	// Move over buttons in .form-actions to align with .controls
 	.form-actions {
